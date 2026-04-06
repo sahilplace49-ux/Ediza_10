@@ -5,14 +5,14 @@
 }
 
 :root {
-    --bg-dark: #0F0F0F;
-    --bg-charcoal: #1C1C1C;
-    --accent-blue: #1F3C88;
-    --neon-green: #00FF88;
-    --soft-red: #FF3B3B;
-    --premium-gray: #2A2A2A;
-    --text-light: #F5F5F5;
-    --text-gray: #A0A0A0;
+    --bg-dark: #181818;
+    --bg-charcoal: #242424;
+    --accent-gold: #C6A75E;
+    --accent-gold-dark: #A88A4A;
+    --soft-white: #F5F5F5;
+    --text-gray: #B0B0B0;
+    --card-bg: #242424;
+    --border-color: #3A3A3A;
 }
 
 html {
@@ -20,12 +20,11 @@ html {
 }
 
 body {
-    font-family: 'Rajdhani', 'Inter', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg-dark);
-    color: var(--text-light);
+    color: var(--soft-white);
     line-height: 1.6;
     overflow-x: hidden;
-    cursor: none;
 }
 
 body.loaded {
@@ -56,7 +55,7 @@ body.loaded {
 }
 
 .loading-logo {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 3rem;
     font-weight: 900;
     color: var(--text-light);
@@ -140,7 +139,7 @@ body:hover #cursor-glow {
 }
 
 .logo {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 900;
     color: var(--text-light);
@@ -309,7 +308,7 @@ body:hover #cursor-glow {
 }
 
 .status-text {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-light);
@@ -317,16 +316,16 @@ body:hover #cursor-glow {
 }
 
 .hero-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 900;
+    font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
-    color: var(--text-light);
+    color: var(--soft-white);
 }
 
 .gradient-text {
-    background: linear-gradient(135deg, var(--accent-blue), var(--neon-green));
+    background: linear-gradient(135deg, var(--accent-gold), #D4AF8A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -341,7 +340,7 @@ body:hover #cursor-glow {
 
 .hero-subtitle {
     font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-    color: var(--text-gray);
+    color: var(--accent-gold);
     margin-bottom: 12px;
     font-weight: 600;
     text-transform: uppercase;
@@ -350,7 +349,7 @@ body:hover #cursor-glow {
 
 .hero-tags {
     font-size: clamp(1rem, 2vw, 1.2rem);
-    color: var(--neon-green);
+    color: var(--accent-gold);
     margin-bottom: 40px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -365,7 +364,7 @@ body:hover #cursor-glow {
 
 .btn {
     padding: 16px 40px;
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
     font-weight: 700;
     text-decoration: none;
@@ -381,28 +380,28 @@ body:hover #cursor-glow {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-blue), var(--neon-green));
+    background: linear-gradient(135deg, var(--accent-gold), #D4AF8A);
     color: var(--bg-dark);
-    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+    box-shadow: 0 0 30px rgba(198, 167, 94, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 0 50px rgba(0, 255, 136, 0.6);
+    box-shadow: 0 0 50px rgba(198, 167, 94, 0.6);
 }
 
 .btn-secondary {
     background: transparent;
-    color: var(--neon-green);
-    border: 2px solid var(--neon-green);
-    box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 0 20px rgba(198, 167, 94, 0.2);
 }
 
 .btn-secondary:hover {
-    background: var(--neon-green);
+    background: var(--accent-gold);
     color: var(--bg-dark);
     transform: translateY(-3px);
-    box-shadow: 0 0 40px rgba(0, 255, 136, 0.5);
+    box-shadow: 0 0 40px rgba(198, 167, 94, 0.5);
 }
 
 .glow-btn::before {
@@ -458,12 +457,232 @@ body:hover #cursor-glow {
     position: relative;
 }
 
-.roblox-section {
-    background: linear-gradient(180deg, var(--bg-dark) 0%, var(--bg-charcoal) 100%);
+.roblox-library-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-charcoal) 100%);
 }
 
-.minecraft-section {
+.section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.library-subtitle {
+    font-size: 1.4rem;
+    color: var(--accent-gold);
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.library-intro {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.roblox-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.roblox-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+}
+
+.roblox-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 40px rgba(198, 167, 94, 0.3);
+    border-color: var(--accent-gold);
+}
+
+.video-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #1a1a1a;
+    overflow: hidden;
+}
+
+.thumbnail-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.roblox-card:hover .thumbnail-image {
+    transform: scale(1.08);
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.roblox-card:hover .play-btn {
+    opacity: 1;
+}
+
+.play-btn svg {
+    filter: drop-shadow(0 0 15px rgba(198, 167, 94, 0.6));
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.roblox-card h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--soft-white);
+    margin-bottom: 12px;
+    letter-spacing: 0.3px;
+}
+
+.card-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: rgba(198, 167, 94, 0.15);
+    border: 1px solid rgba(198, 167, 94, 0.4);
+    border-radius: 16px;
+    font-size: 0.8rem;
+    color: var(--accent-gold);
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+}
+
+.roblox-card:hover .tag {
+    background: rgba(198, 167, 94, 0.25);
+    border-color: var(--accent-gold);
+}
+
+.library-cta {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.cta-text {
+    font-size: 1.4rem;
+    color: var(--soft-white);
+    margin-bottom: 24px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.featured-section {
+    padding: 120px 0;
     background: linear-gradient(180deg, var(--bg-charcoal) 0%, var(--bg-dark) 100%);
+}
+
+.featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+.featured-card {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--card-bg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featured-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 40px rgba(198, 167, 94, 0.3);
+    border-color: var(--accent-gold);
+}
+
+.featured-card .video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+}
+
+.featured-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(198, 167, 94, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.featured-card:hover .featured-overlay {
+    opacity: 1;
+}
+
+.featured-card h3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(24, 24, 24, 0.9), transparent);
+    padding: 20px;
+    color: var(--soft-white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.challenges-section {
+    padding: 120px 0;
+    background: linear-gradient(135deg, var(--bg-dark) 0%, var(--bg-charcoal) 100%);
+}
+
+.challenge-card {
+    max-width: 900px;
+    margin: 60px auto 0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    border: 1px solid var(--border-color);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.challenge-card:hover {
+    box-shadow: 0 0 50px rgba(198, 167, 94, 0.3);
+    border-color: var(--accent-gold);
+    transform: translateY(-5px);
+}
+
+.challenge-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
 }
 
 .section-banner {
@@ -499,13 +718,13 @@ body:hover #cursor-glow {
 }
 
 .section-title {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 900;
-    color: var(--text-light);
+    font-weight: 700;
+    color: var(--soft-white);
     text-transform: uppercase;
-    letter-spacing: 3px;
-    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(198, 167, 94, 0.3);
 }
 
 .section-title.centered {
@@ -622,7 +841,7 @@ body:hover #cursor-glow {
 }
 
 .service-card h3 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--text-light);
@@ -664,7 +883,7 @@ body:hover #cursor-glow {
 }
 
 .stat-number {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 4rem;
     font-weight: 900;
     background: linear-gradient(135deg, var(--accent-blue), var(--neon-green));
@@ -676,7 +895,7 @@ body:hover #cursor-glow {
 }
 
 .stat-suffix {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 2rem;
     font-weight: 900;
     background: linear-gradient(135deg, var(--accent-blue), var(--neon-green));
@@ -687,7 +906,7 @@ body:hover #cursor-glow {
 }
 
 .stat-label {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-gray);
@@ -780,7 +999,7 @@ body:hover #cursor-glow {
 }
 
 .pricing-title {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-light);
@@ -789,7 +1008,7 @@ body:hover #cursor-glow {
 }
 
 .pricing-amount {
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
     font-size: 2.5rem;
     font-weight: 900;
     background: linear-gradient(135deg, var(--accent-blue), var(--neon-green));
@@ -842,7 +1061,7 @@ body:hover #cursor-glow {
 }
 
 .payment-title {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-light);
@@ -881,7 +1100,7 @@ body:hover #cursor-glow {
 }
 
 .payment-method h4 {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1.3rem;
     font-weight: 700;
     color: var(--text-light);
@@ -898,7 +1117,7 @@ body:hover #cursor-glow {
 .highlight {
     color: var(--neon-green);
     font-weight: 700;
-    font-family: 'Orbitron', monospace;
+    font-family: 'Inter', sans-serif;
 }
 
 .contact-section {
@@ -924,7 +1143,7 @@ body:hover #cursor-glow {
     border: 1px solid var(--premium-gray);
     border-radius: 8px;
     color: var(--text-light);
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -1005,7 +1224,11 @@ body:hover #cursor-glow {
 }
 
 @media (max-width: 1024px) {
-    .video-grid {
+    .roblox-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1084,8 +1307,11 @@ body:hover #cursor-glow {
         transform: rotate(-45deg) translate(8px, -8px);
     }
 
-    .video-grid,
-    .minecraft-grid {
+    .roblox-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-grid {
         grid-template-columns: 1fr;
     }
 
